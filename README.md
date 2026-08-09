@@ -1,5 +1,2 @@
 # Armor XD Website
-Official Armor XD informational website.
-
-## Deploy
-Static site: no build command required. Publish the repository root with Cloudflare Pages.
+Flat-file Cloudflare-ready version with CSS and JavaScript embedded in each HTML page.
