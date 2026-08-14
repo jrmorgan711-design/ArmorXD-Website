@@ -40,6 +40,10 @@ h3{margin:0 0 8px;font-size:1.12rem}
 .btn.secondary{border:1px solid #365064;background:#0c141a}
 .btn.disabled{opacity:.55;cursor:not-allowed}
 .section{padding:74px 0;border-top:1px solid #151f26}
+.tagline{font-size:clamp(1.5rem,3vw,2.45rem);font-weight:950;letter-spacing:.035em;margin:-4px 0 20px}.tagline span{color:var(--blue)}
+.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}.story{position:relative;min-height:390px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#0c1217}.story img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.story:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,#05080be8 100%)}.story-copy{position:absolute;z-index:2;left:22px;right:22px;bottom:22px}.story-copy b{font-size:1.5rem;line-height:1.02}.story-copy span{display:block;color:var(--blue);font-weight:900;margin-top:7px}
+.asset-banner{position:relative;border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-top:30px}.asset-banner img{display:block;width:100%}.asset-banner .overlay{position:absolute;inset:0;display:flex;align-items:flex-start;padding:28px;background:linear-gradient(180deg,#05090cbb,transparent 42%)}.asset-banner h3{font-size:clamp(1.6rem,3vw,2.8rem);letter-spacing:.03em}.asset-banner h3 span{color:var(--blue)}
+.video-placeholder{border:1px dashed #31526b;border-radius:18px;padding:45px;text-align:center;background:linear-gradient(135deg,#0b141b,#090e12);margin-top:28px}.video-placeholder strong{display:block;font-size:1.5rem;margin-bottom:8px}.video-placeholder p{color:var(--muted);margin:0 auto;max-width:650px;line-height:1.6}
 .section.dark{background:#090f13}
 .features{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-top:31px}
 .card{background:linear-gradient(180deg,#11191f,#0d1318);border:1px solid var(--line);border-radius:15px;padding:25px}
@@ -63,6 +67,7 @@ h3{margin:0 0 8px;font-size:1.12rem}
 footer{padding:36px 0;border-top:1px solid var(--line);color:#89949d}
 .footer-grid{display:flex;justify-content:space-between;gap:20px;align-items:center}
 @media(max-width:900px){
+ .problem-grid{grid-template-columns:1fr 1fr}
  .hero-grid,.detail-grid{grid-template-columns:1fr}
  .features{grid-template-columns:1fr 1fr}
  .app-grid{grid-template-columns:1fr 1fr}
@@ -71,6 +76,7 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:#89949d}
  nav{display:none}
 }
 @media(max-width:600px){
+ .problem-grid{grid-template-columns:1fr}
  .features,.app-grid,.gallery,.specs{grid-template-columns:1fr}
  .gallery img:first-child{grid-column:auto}
  .gallery img{height:auto}
@@ -100,7 +106,7 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:#89949d}
     <div>
       <div class="eyebrow">Asset Protection Series</div>
       <h1>AIR<br>ARMOR XD</h1>
-      <p class="lead">Purpose-built protection for Apple AirTag®—designed for trailers, equipment, off-road vehicles and other demanding tracking applications.</p>
+      <div class="tagline">XTREME DUTY. <span>ZERO COMPROMISE.</span></div><p class="lead">Rugged, bolt-on protection for Apple AirTag®—built for trailers, equipment, off-road vehicles and the gear you don’t want to lose.</p>
       <div class="pills">
         <span class="pill">Gasket-Sealed Design</span>
         <span class="pill">Stainless Hardware</span>
@@ -109,11 +115,35 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:#89949d}
       </div>
       <div class="actions">
         <a class="btn primary" href="#features">Explore Air Armor XD</a>
+        <a class="btn secondary" href="#applications">See Applications</a>
         <span class="btn secondary disabled">eBay Listing Coming Soon</span>
       </div>
     </div>
     <img class="hero-photo" src="air-hero.jpg" alt="Black Air Armor XD protective enclosure">
   </div>
+</section>
+
+
+<section class="section dark">
+  <div class="wrap">
+    <div class="eyebrow">Asset Protection</div>
+    <h2>Protect and track the equipment you don’t want to lose.</h2>
+    <p class="lead">Air Armor XD is built to disappear into the asset—not dominate it. Compact mounting, mechanical fasteners and a serviceable enclosure help keep an AirTag protected and discreet.</p>
+    <div class="problem-grid">
+      <div class="story"><img src="application-trailer.jpg" alt="Air Armor XD trailer application"><div class="story-copy"><b>YOUR TRAILER LEFT.</b><span>YOUR TRACKER DIDN’T.</span></div></div>
+      <div class="story"><img src="application-cooler.jpg" alt="Air Armor XD cooler application"><div class="story-copy"><b>COOLERS GET STOLEN.</b><span>YOUR TRACKER SHOULDN’T.</span></div></div>
+      <div class="story"><img src="application-utv.jpg" alt="Air Armor XD off-road application"><div class="story-copy"><b>BUILT FOR MUD.</b><span>READY FOR ANYTHING.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+ <div class="wrap">
+  <div class="eyebrow">Asset Protection Series</div>
+  <h2>One tracker. Every asset.</h2>
+  <p class="lead">From trailers and off-road machines to coolers, generators, tools and equipment, Air Armor XD gives one familiar tracking platform a rugged mounting solution for the real world.</p>
+  <div class="asset-banner"><img src="application-series.jpg" alt="Air Armor XD applications across trailers, UTVs, equipment, coolers, generators and boats"><div class="overlay"><h3>ONE TRACKER. <span>EVERY ASSET.</span></h3></div></div>
+ </div>
 </section>
 
 <section id="features" class="section">
@@ -161,12 +191,22 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:#89949d}
   </div>
 </section>
 
+
+<section class="section dark">
+ <div class="wrap">
+  <div class="eyebrow">Built for the Real World</div>
+  <h2>See Air Armor XD in action.</h2>
+  <p class="lead">This section is ready for real-world footage: installation, mud, water exposure, vibration and service access. Using actual product footage here will make the rugged positioning much more credible than a polished render alone.</p>
+  <div class="video-placeholder"><strong>REAL-WORLD TEST VIDEO — COMING SOON</strong><p>Recommended clips: bolt-on installation • water and mud exposure • UTV/trailer vibration • opening the enclosure • AirTag battery access.</p></div>
+ </div>
+</section>
+
 <section class="section dark">
   <div class="wrap detail-grid">
     <img src="air-white.jpg" alt="White Air Armor XD enclosure">
     <div>
       <div class="eyebrow">Product Details</div>
-      <h2>Simple hardware. Straightforward service.</h2>
+      <h2>Small footprint. Serious protection.</h2>
       <p class="lead">The two-piece layout keeps installation and service simple while allowing the tracker to remain fully enclosed once assembled.</p>
       <div class="specs">
         <div class="spec"><b>Tracker:</b><br>Apple AirTag compatible</div>
@@ -197,7 +237,7 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:#89949d}
       <img src="kinetic-forge-logo.jpg" alt="Made by Kinetic Forge — Engineered to Endure">
     </div>
 
-    <p class="legal">Apple, AirTag and the Apple logo are trademarks of Apple Inc. “Gasket-sealed” describes the enclosure design and is not an IP-rating claim. Final product appearance, materials and specifications may change as designs are refined.</p>
+    <p class="legal">Apple®, AirTag®, and the Apple logo are trademarks of Apple Inc. Kinetic Forge LLC and Air Armor XD are not affiliated with or endorsed by Apple Inc. “Gasket-sealed” describes the enclosure design and is not an IP-rating claim. Final product appearance, materials and specifications may change as designs are refined.</p>
   </div>
 </section>
 </main>
